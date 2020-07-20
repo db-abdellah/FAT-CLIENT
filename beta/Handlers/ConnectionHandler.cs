@@ -13,6 +13,7 @@ namespace beta.Handlers
     {
         private static readonly ConnectionHandler instance = new ConnectionHandler();
         private static readonly object padlock = new object();
+        private String   connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
         
 
         static ConnectionHandler()
@@ -33,7 +34,7 @@ namespace beta.Handlers
         public IDbConnection getConnection()
         {
 
-            IDbConnection dbConnection = new MySqlConnection("datasource=localhost;database=NomDuBD;userid=DBLogin;password=DBPassword")
+            IDbConnection dbConnection = new MySqlConnection(connectionString)
             return dbConnection;
 
         }
