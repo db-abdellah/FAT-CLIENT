@@ -33,7 +33,7 @@ namespace beta.Handlers
         public IDbConnection getConnection()
         {
 
-            IDbConnection dbConnection = new MySqlConnection("datasource=localhost;database=ensa;userid=root;password=");
+            IDbConnection dbConnection = new MySqlConnection("datasource=localhost;database=NomDuBD;userid=DBLogin;password=DBPassword")
             return dbConnection;
 
         }
